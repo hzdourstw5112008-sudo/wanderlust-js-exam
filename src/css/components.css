@@ -1,0 +1,217 @@
+.section-card,
+.currency-converter-card,
+.day-length-card {
+  margin-bottom: 22px;
+  padding: 24px;
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.section-header {
+  margin-bottom: 19px;
+}
+
+.section-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 5px;
+  font-size: 17px;
+}
+
+.section-header h2 i {
+  color: var(--primary-500);
+  font-size: 16px;
+}
+
+.section-subtitle {
+  margin: 0;
+  color: var(--slate-500);
+  font-size: 12px;
+}
+
+.form-group,
+.currency-input-group,
+.currency-select-group {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group label,
+.currency-input-group label,
+.currency-select-group label {
+  color: var(--slate-600);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.form-group label i { margin-right: 4px; color: var(--slate-400); }
+
+.form-select,
+.currency-amount-input {
+  width: 100%;
+  min-height: 43px;
+  padding: 9px 12px;
+  border: 1px solid var(--slate-300);
+  border-radius: var(--radius-sm);
+  color: var(--slate-700);
+  background: #fff;
+}
+
+.form-select:focus,
+.currency-amount-input:focus {
+  border-color: var(--primary-500);
+  outline: 3px solid rgb(59 130 246 / 13%);
+}
+
+.btn,
+.btn-primary,
+.btn-event,
+.btn-buy-ticket,
+.btn-map-link {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 15px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .16s ease, background .16s ease, box-shadow .16s ease;
+}
+
+.btn-primary {
+  color: #fff;
+  background: var(--primary-600);
+  box-shadow: 0 4px 10px rgb(37 99 235 / 20%);
+}
+
+.btn-primary:hover { transform: translateY(-1px); background: var(--primary-700); }
+.btn-lg { min-height: 48px; }
+.btn-explore { min-height: 43px; white-space: nowrap; }
+
+.btn-white-outline {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px 12px;
+  border: 1px solid rgb(255 255 255 / 55%);
+  border-radius: var(--radius-sm);
+  color: #fff;
+  background: rgb(255 255 255 / 12%);
+  cursor: pointer;
+}
+
+.btn-white-outline:hover { background: rgb(255 255 255 / 22%); }
+
+.empty-state {
+  display: grid;
+  min-height: 260px;
+  justify-items: center;
+  align-content: center;
+  padding: 35px 20px;
+  color: var(--slate-500);
+  text-align: center;
+}
+
+.empty-state h3 { margin: 11px 0 5px; font-size: 18px; }
+.empty-state p { max-width: 420px; margin-bottom: 17px; }
+.empty-icon { color: var(--slate-300); font-size: 34px; }
+
+.loading-overlay {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgb(15 23 42 / 38%);
+  backdrop-filter: blur(2px);
+}
+
+.loading-overlay.hidden { display: none; }
+
+.loading-content {
+  min-width: 190px;
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.loading-spinner { margin-bottom: 8px; }
+.loading-content p { margin: 0; color: var(--slate-600); font-weight: 500; }
+
+.toast-container {
+  position: fixed;
+  z-index: 120;
+  top: 18px;
+  right: 18px;
+  display: grid;
+  width: min(360px, calc(100vw - 36px));
+  gap: 9px;
+}
+
+.toast {
+  padding: 13px 15px;
+  border: 1px solid var(--slate-200);
+  border-left: 4px solid var(--primary-500);
+  border-radius: var(--radius-sm);
+  color: var(--slate-700);
+  background: #fff;
+  box-shadow: var(--shadow-md);
+  animation: view-enter .2s ease both;
+}
+
+.toast.error { border-left-color: var(--red-500); }
+.toast.success { border-left-color: var(--green-500); }
+
+.modal-overlay {
+  position: fixed;
+  z-index: 110;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgb(15 23 42 / 55%);
+}
+
+.modal-overlay.hidden { display: none; }
+
+.modal-content {
+  position: relative;
+  width: min(600px, 100%);
+  max-height: min(80vh, 700px);
+  overflow: auto;
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow-md);
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  color: var(--slate-500);
+  background: var(--slate-100);
+  cursor: pointer;
+}
+
+@media (max-width: 560px) {
+  .section-card, .currency-converter-card, .day-length-card { padding: 17px; }
+}

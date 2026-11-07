@@ -1,0 +1,32 @@
+.sun-times-layout { display: grid; gap: 17px; }
+.sun-main-card { overflow: hidden; border: 1px solid var(--slate-200); border-radius: var(--radius-lg); background: #fff; box-shadow: var(--shadow-sm); }
+.sun-main-header { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 21px 23px; border-bottom: 1px solid var(--slate-100); }
+.sun-location h2 { margin: 0 0 3px; font-size: 18px; }
+.sun-location h2 i { color: #f97316; }
+.sun-location p { margin: 0; color: var(--slate-500); font-size: 11px; }
+.sun-date-display { text-align: right; }
+.sun-date-display .date { color: var(--slate-700); font-size: 12px; font-weight: 600; }
+.sun-date-display .day { color: var(--slate-400); font-size: 10px; }
+.sun-times-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 11px; padding: 19px; }
+.sun-time-card { display: grid; min-height: 125px; justify-items: center; align-content: center; gap: 5px; border-radius: var(--radius-sm); background: var(--slate-50); text-align: center; }
+.sun-time-card .icon { color: #f59e0b; font-size: 18px; }
+.sun-time-card.dawn .icon, .sun-time-card.dusk .icon { color: #7c3aed; }
+.sun-time-card.daylight .icon { color: #2563eb; }
+.sun-time-card .label { color: var(--slate-600); font-size: 10px; }
+.sun-time-card .time { color: var(--slate-900); font-family: "Poppins",sans-serif; font-size: 17px; font-weight: 700; }
+.sun-time-card .sub-label { color: var(--slate-400); font-size: 9px; }
+.day-length-card { margin-bottom: 0; }
+.day-length-card h3 { margin: 0 0 17px; font-size: 14px; }
+.day-length-card h3 i { margin-right: 5px; color: #f59e0b; }
+.day-progress-bar { height: 11px; overflow: hidden; border-radius: 99px; background: #e0e7ff; }
+.day-progress-fill { height: 100%; border-radius: inherit; background: linear-gradient(90deg,#fbbf24,#f97316); transition: width .3s ease; }
+.day-length-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-top: 15px; text-align: center; }
+.day-stat .value { color: var(--slate-800); font-family: "Poppins",sans-serif; font-size: 15px; font-weight: 700; }
+.day-stat .label { color: var(--slate-400); font-size: 10px; }
+
+@media (max-width: 600px) {
+  .sun-main-header { align-items: flex-start; flex-direction: column; }
+  .sun-date-display { text-align: left; }
+  .sun-times-grid { grid-template-columns: repeat(2,minmax(0,1fr)); padding: 13px; }
+  .sun-time-card { min-height: 110px; }
+}
